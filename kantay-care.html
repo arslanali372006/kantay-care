@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Care with Kantay</title>
+<meta name="theme-color" content="#2f4a3a">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#25302a; --muted:#6b7a70;
+    --green:#2f4a3a; --accent:#c9704a; --line:#e6dfd0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:var(--bg);color:var(--ink);
+    line-height:1.6;min-height:100vh;
+  }
+  header{
+    background:var(--green);color:#f6f2ea;
+    padding:36px 20px 56px;text-align:center;
+  }
+  header .brand{font-size:13px;letter-spacing:.2em;text-transform:uppercase;opacity:.75;font-family:system-ui,sans-serif}
+  header h1{font-size:30px;font-weight:600;margin-top:6px}
+  header p{opacity:.8;margin-top:6px;font-size:15px}
+  main{max-width:560px;margin:-32px auto 40px;padding:0 16px}
+  .tabs{
+    display:flex;background:var(--card);border-radius:999px;padding:5px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);margin-bottom:18px;
+  }
+  .tabs button{
+    flex:1;border:0;background:none;padding:12px 10px;border-radius:999px;
+    font:600 15px system-ui,sans-serif;color:var(--muted);cursor:pointer;
+  }
+  .tabs button.active{background:var(--green);color:#fff}
+  .panel{display:none}
+  .panel.active{display:block}
+  .tip{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:16px 18px;margin-bottom:12px;display:flex;gap:14px;
+  }
+  .tip .icon{font-size:24px;line-height:1.3}
+  .tip h2{font:700 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+  .tip p{font-size:16px}
+  .note{
+    text-align:center;color:var(--muted);font-size:15px;margin:22px 8px;
+  }
+  .contact{
+    background:var(--green);color:#f6f2ea;border-radius:18px;padding:22px;text-align:center;
+  }
+  .contact h3{font-size:18px;margin-bottom:4px}
+  .contact p{opacity:.85;font-size:15px}
+  .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;justify-content:center}
+  .btns a{
+    flex:1;min-width:140px;text-decoration:none;padding:12px 16px;border-radius:999px;
+    font:600 15px system-ui,sans-serif;
+  }
+  .wa{background:#25d366;color:#0b3d1c}
+  .call{background:#f6f2ea;color:var(--green)}
+  footer{text-align:center;color:var(--muted);font-size:14px;padding:0 0 32px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Kantay.pk</div>
+  <h1>Care with Kantay</h1>
+  <p>Easy care for your new plant 🌱</p>
+</header>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button id="tab-succulent" class="active" role="tab" onclick="show('succulent')">Succulent</button>
+    <button id="tab-cactus" role="tab" onclick="show('cactus')">Cactus</button>
+  </div>
+
+  <!-- SUCCULENT -->
+  <section id="succulent" class="panel active">
+    <div class="tip"><div class="icon">☀️</div><div>
+      <h2>Light</h2>
+      <p>Keep in indirect sunlight. In peak winters, direct sunlight gives the best results.</p>
+    </div></div>
+    <div class="tip"><div class="icon">💧</div><div>
+      <h2>Watering</h2>
+      <p>Spray water generously the first time, then spray again only when you feel the soil has dried out.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🪴</div><div>
+      <h2>Pour on the soil</h2>
+      <p>Make sure to pour water on the soil, not on the plant.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🍃</div><div>
+      <h2>Best spot</h2>
+      <p>A well ventilated place with moderate sunlight shows the best growth.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🌱</div><div>
+      <h2>Roots</h2>
+      <p>It'll grow roots soon Insha'Allah. Until then, if it gets displaced, just put it back on the soil mix. No need to sow it.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🌧️</div><div>
+      <h2>Rain</h2>
+      <p>Put it outside for some time in the rain. It loves it :)</p>
+    </div></div>
+  </section>
+
+  <!-- CACTUS -->
+  <section id="cactus" class="panel">
+    <div class="tip"><div class="icon">☀️</div><div>
+      <h2>Light</h2>
+      <p>Keep in indirect sunlight. In peak winters, direct sunlight gives the best results.</p>
+    </div></div>
+    <div class="tip"><div class="icon">💧</div><div>
+      <h2>Watering</h2>
+      <p>Spray water generously the first time, then spray again only when you feel the soil has dried out.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🪴</div><div>
+      <h2>Pour on the soil</h2>
+      <p>Make sure to pour water on the soil, not on the plant.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🍃</div><div>
+      <h2>Best spot</h2>
+      <p>A well ventilated spot with moderate sunlight, preferably open air.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🌸</div><div>
+      <h2>Flowering</h2>
+      <p>To make it flower, keep it in an open environment with low to moderate sunlight.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🌱</div><div>
+      <h2>Roots</h2>
+      <p>It'll grow roots soon Insha'Allah. Until then, if it gets displaced, just put it back on the soil mix. No need to sow it.</p>
+    </div></div>
+    <div class="tip"><div class="icon">🌧️</div><div>
+      <h2>Rain</h2>
+      <p>Put it outside for some time in the rain. It loves it :)</p>
+    </div></div>
+  </section>
+
+  <p class="note">It's a very easy to care plant. These are just a few precautions for better growth.</p>
+
+  <div class="contact">
+    <h3>Questions? We'd love to help ✨</h3>
+    <p>One to one assistance with Shuja Ahmad Farooq</p>
+    <div class="btns">
+      <a class="wa" href="https://wa.me/923354339933" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="call" href="tel:+923354339933">0335 4339933</a>
+    </div>
+  </div>
+</main>
+
+<footer>Happy gardening ❤️</footer>
+
+<script>
+  function show(id, updateHash){
+    ['succulent','cactus'].forEach(function(k){
+      document.getElementById(k).classList.toggle('active', k===id);
+      document.getElementById('tab-'+k).classList.toggle('active', k===id);
+    });
+    if(updateHash!==false){ try{ history.replaceState(null,'','#'+id); }catch(e){} }
+  }
+  // Open the right tab from the link: yoursite.com/#cactus
+  var h = (location.hash||'').replace('#','');
+  if(h==='cactus'||h==='succulent') show(h,false);
+</script>
+</body>
+</html>
